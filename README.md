@@ -1,15 +1,7 @@
-# od.tools.standards.touch #
+# TouchDesigner Style Guide | Ragan
 
 ## Read Me Author ##
-**Matthew Ragan**
-
-**matthew.ragan@obscuradigital.com**
-
-[Read More on the Wiki](https://bitbucket.org/obscura/od.tools.standards.touch/wiki/Home)
-
---------------------------------
-DATE 2015-11-5 || TIME 11:43:21
---------------------------------
+[**Matthew Ragan**](https://matthewragan.com/)
 
 ## A Simple Disclaimer ##
 Style guides are just that, guides. The suggestions outlined below aren’t hard and fast rules. For any standard there are likely to be exceptions, challenges, and issues. Code the way you want to code, but also remember that you’re making something that other programmers (your future self included) are going to return to, pull apart, question, interrogate, curse, praise, and judge. Your act of fixing an idea in an operational structure is both a creative act, as well as measured and considered one. TouchDesigner networks are challenging to share and collaborate in - they are sprawling, nested, multi-layered collections of signal flows. That is to say that they are already challenging to decode - you don’t have to use this standard, but cultivate and implement one for your own sake, and for the sake of your collaborators. 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+
+<h1>Perform Window Output</h1>
+<hr>
+<p>
+    How you organize your output windows matters in TouchDesigner - a lot. In fact, it probably matters a lot more than you might expect. Part of that is the nature of working with OpenGL, working with operating systems, working with GPUs, and the particular nature of high performance graphics. If you've played many video games on a desktop with multiple displays you’ve seen part of this phenomenon. With multi-screen set-ups games usually take on a few variations:</p>
+    <ul class="circle">
+        <li>the game is on one screen and the others are all black</li>
+        <li>the game adjusts to a large panorama across all the screens</li>
+        <li>the game is only one one screen, but you can see your desktop and applications on adjacent screens.</li>
+    </ul>
+<p>
+    On Windows platforms, if an application takes up the full screen, and has “focus” (the term meaning that you’re interacting with that application) it typically has more control over the drawing mechanisms for the computer. The term for this is “Exclusive Mode” and this usually means that the application essentially tells the operating system that the desktop no longer needs to be drawn. This can have a significant impact on your performance, and generally speaking if you want your 3D application to run its very best (at least on Windows) this is how you want your app to behave. 
+    <br><br>    
+    What if you have multiple monitors connected? Well, in that scenario, you want to draw a single window that spans all of your displays. It may seem like you should be able to open multiple windows but depending on your hardware this can have significant performance implications. On some hardware, your refresh rate will be split between your open windows - so imagine that you’re trying to maintain 60 fps - when you open a second window, you now split your draw time between the two different application windows and your suddenly down to 30 fps. On some hardware you’ll see your FPS counter drop in half as soon as you open another window.
+    <br><br>    
+    MacOS is another story altogether - and one that I don’t have much direct experience problem solving for. It does, however, follow that if you want the best multi-platform support for your work, you still want to draw a single window that spans multiple displays. 
+        
+    <br><br>
+</p> 
+
+<hr>
+<h3>Do</h3>
+<ul class="circle">
+    <li>Use a single window to span multiple displays</li>
+    <li>Make sure your window borders are turned off</li>
+    <li>Make sure your window is correctly set to be the “Perform Window” for TouchDesigner</li>
+    <li>Make sure your project is configured to open in “Perform Mode”</li>
+    <li>Thoughtfully organize your outputs so they’re the same every time</li>
+</ul>
+
+<h3>Don't</h3>
+<ul class="circle">
+    <li>Use multiple window COMPs</li>
+    <li>Don’t use scripts to open your windows one at a time - make sure your project is correctly configured for the best performance</li>
+</ul>
+
+<hr>
+<br>
+<footer>
+Updated 09.03.19 <br>
+Matthew Ragan
+</footer>
+
+</body>
+</html> 

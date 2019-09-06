@@ -5,17 +5,17 @@
 </head>
 <body>
 
-<h1>Organization</h1>
+<h1>Floating Controls</h1>
 <hr>
-<p>A network's re-usability lives and dies in its organization and structuring. While there are limits to a modular approach, it's well worth considering the larger implications around cultivating a forward focused temperament when building new systems. Every project will eventually come up against deadlines, changes orders, and the necessities of project delivery. To the best of our abilities, however, we might consider a tempered approach to thinking about how a particular element might be able to be used and re-used in future projects.
-<br><br>
-To that end, clear organization and careful planning help facilitate this process. For the sake of a simple case study, let's for a moment consider instancing networks. For the uninitiated, instancing allows you to reuse a single piece of geometry once it's been passed to the GPU. This method of drawing geometry is significantly cheaper, computationally, than drawing additional copies of the geometry on the CPU. In principle, you only draw the geometry once, then create a transformation matrix for subsequent copies of the original geometry. The transformation of the copies is most efficiently done in CHOP channels, sometimes initially fed by a geometry converted to channel data. 
-<br><br>    
-If we develop the transformation channels in the same network as the rendering system, we're able to quickly see what's happening in the process. This also allows for less complicated paths, in a network that is generally flatter. The trade off here is re-usability. This approach typically makes it more difficult to identify how to break apart a network for re-use. The alternative, would be to build the rendering engine as a separate directory from the networking focused on object transformation. It's difficult to say which is the "better" choice, as both have their merits. Rather, it's important to understand that one approach has a shorter potential shelf life. 
-<br><br>
-This brings us to a larger question of organization - in what manner should one organize their network. While there aren't any hard and fast rules, it's worth considering how you might construct a network as specific to it's given role. In the example above, you might build a network that was focused on transformational information, while another was focused on texture's, and finally a network that was the rendering engine. This modular division creates more layers, but also allows for the reuse of any one of those elements - save just the texture building system, or the instances. This also creates space to consider how you might externalize those elements - in this respect a git history would allow the programmer to trace back through various iterations of one element while still preserving the current developments of another - keep all of your advances in texture building, but go back to an earlier transformation system - for example.
-<br><br>
-If you're not yet sold on this idea, at the very least consider dividing up your network, spatially, into regions responsible for a given task. Create territories for rendering, texture building, and instance translation. The most difficult to parse networks a wandering collision of every element in a single space. When possible, it is essential that you avoid this kind of programming. All of us invariably work fast and hard, creating functional but not elegant code - that, however, should not be our primary modus operandi. </p> 
+<p>
+    If you follow the guidelines specified in the Perform Window Output section, how can you handle a pop-up window? What giveS? Well, just because you’re not adding an extra floating window, doesn’t mean that you can’t fake that kind of behavior. You can still create the illusion of having a separate window. How?!
+    <br><br>
+    There’s a little-used feature for components that all you to reposition a container / widget COMP that’s in another container / widget COMP. That’s ideal for just this type of situation. You can find this parameter set on the Panel page of the component about half-way down called “Drag to reposition.” The options here allow you to reposition the component locally, or to reposition the window this is inside of. 
+    <br><br>
+    <img src="../../../assets/imgs/reposition.png" alt="Reposition Pars" width="500">
+    <br><br>
+    The other feature to take advantage of is the parameter that allows you to show or hide a component. Also on the panel page of the component, the Display toggle allows you to hide / show a component. The effect of using these together is that you can create a pop-up style window that you can show / hide, which doesn’t impact the efficiency of drawing a single window.
+</p> 
 
 <hr>
 <h3>Do</h3>
